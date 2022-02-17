@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./css/estilos.css"/>
+    
+    <title>Aplicación CRUD Tabla Final</title>
+</head>
+<body onload="inicializa()">
+    <main class=container1>
+        <header>
+            <div>
+                <img class="logo" src="imagenes/Logo Huud pantone 10267 C.png" alt="Logotipo"/>
+            </div>
+            <div>
+                <h2>MANTENIMIENTO AL CATÁLOGO DE PRODUCTOS</h2>
+            </div>
+            <div>
+                <img class="logo" src="imagenes/Logo Huud pantone 10267 C.png" alt="Logotipo"/>
+            </div>
+        </header>
+        
+        <section class="captura">
+
+            <div class="campos" id="campos">
+                <div class="campos1">
+                    <div>
+                        <input  class="capCodigo" id="codigo" type="text" minlength="8" maxlength="8" onchange="mayusc(this)" placeholder="Código"/> 
+                    </div>                
+                    <div>                
+                        <input  class="capDescrip" id="descripcion" type="text" minlength="50" maxlength="50" onchange="mayusc(this)"  placeholder="Descripción del producto"/> 
+                    </div>
+                </div>
+                <div class="campos2">
+                    <div>                
+                        <input  class="capExist" id="existencia" type="text" minlength="6" maxlength="6"  placeholder="Exist"/> 
+                    </div>                
+                    <div>                
+                        <input  class="capPrecio" id="precio" type="text" name="precio" minlength="9" maxlength="9"  placeholder="Precio"/> 
+                    </div>
+                    <div>
+                        <button class="limpiar" id="limpia" type="submit" onclick="limpiaRenglones()">X</button>
+                    </div>
+                    <div>
+                        <button class="agregar" id="agrega" type="submit" onclick="agregaRenglon()">Agregar</button>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+
+        <div class="tabla" >
+            <table>
+                <thead>
+                    <tr>
+                        <th class="renCodigo">CÓDIGO</th>
+                        <th class="renDescrip">DESCRIPCIÓN</th>
+                        <th class="renInventario">EXIST</th>
+                        <th class="renPrecio">PRECIO</th>
+                        <th class="renAccion" colspan="2">ACCIÓN</th>
+                    </tr>
+                </thead>                         
+                <tbody id="renglones">
+            
+                </tbody>
+            </table>
+        </div>
+        <footer>
+            <section class="cierre">
+                <div>
+                    <hr class="division"/>       
+                </div>
+                <div>
+                    <p  class="derechos">© 2021 U Camp. Todos los derechos reservados. Esta es una página de aterrizaje ficticia para fines académicos.</p>
+                    <!-- <button class="agregar" type="submit" onclick="cargaRenglones()">CARGA</button> -->
+                </div>
+            </section>
+        </footer>
+    </main>
+</body>
+</html>
